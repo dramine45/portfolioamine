@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
   // Détection de l'environnement d'hébergement (devient inutile avec le bon base_url)
   // const isVercel = window.location.hostname.endsWith('.vercel.app');
   // const imageSrc = isVercel ? '/amine1.jpg' : `${import.meta.env.BASE_URL}amine1.jpg`;
-  const imageSrc = '/amine1.jpg'; // Chemin simplifié car base enracinée
+  const imageSrc = '/amine2.jpg'; // Chemin mis à jour pour amine2.jpg
 
   return (
     <section id="home" className="min-h-screen bg-background-dark relative pt-16">
