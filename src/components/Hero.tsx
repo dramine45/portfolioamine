@@ -35,6 +35,10 @@ export const Hero: React.FC = () => {
     }
   };
 
+  // Détection de l'environnement d'hébergement
+  const isVercel = window.location.hostname.endsWith('.vercel.app');
+  const imageSrc = isVercel ? '/amine1.jpg' : `${import.meta.env.BASE_URL}amine1.jpg`;
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-16">
       <div className="absolute inset-0 bg-background-dark bg-opacity-70 z-0"></div>
@@ -55,7 +59,7 @@ export const Hero: React.FC = () => {
                 AMINE DIOURI
               </h1>
               <img
-                src={`${import.meta.env.BASE_URL}amine1.jpg`}
+                src={imageSrc}
                 alt="Amine Diouri"
                 className="mx-auto mt-4 rounded-full w-32 h-32 object-cover border-4 border-terminal-red shadow-lg"
               />
