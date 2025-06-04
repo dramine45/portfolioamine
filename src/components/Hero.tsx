@@ -40,12 +40,12 @@ export const Hero: React.FC = () => {
   const imageSrc = isVercel ? '/amine1.jpg' : `${import.meta.env.BASE_URL}amine1.jpg`;
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16">
+    <section id="home" className="min-h-screen bg-background-dark relative pt-16">
       <div className="absolute inset-0 bg-background-dark bg-opacity-70 z-0"></div>
       
       {loaded && (
         <motion.div
-          className="section-container relative z-10 text-center"
+          className="section-container relative z-10 text-center pb-60"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -118,15 +118,16 @@ export const Hero: React.FC = () => {
               <span>LinkedIn</span>
             </a>
           </motion.div>
+
+          {/* Scroll Down Indicator */}
+          <motion.div variants={itemVariants} className="mt-40 text-terminal-white animate-bounce">
+            <a href="#about" className="text-sm">
+              <span className="block">Scroll Down</span>
+              <span className="block text-center text-lg">↓</span>
+            </a>
+          </motion.div>
         </motion.div>
       )}
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-terminal-white animate-bounce">
-        <a href="#about" className="text-sm">
-          <span className="block">Scroll Down</span>
-          <span className="block text-center text-lg">↓</span>
-        </a>
-      </div>
     </section>
   );
 };
