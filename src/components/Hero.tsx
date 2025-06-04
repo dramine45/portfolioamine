@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 AMINE DIOURI
               </h1>
               <img
-                src="/amine1.jpg"
+                src={`${import.meta.env.BASE_URL}amine1.jpg`}
                 alt="Amine Diouri"
                 className="mx-auto mt-4 rounded-full w-32 h-32 object-cover border-4 border-terminal-red shadow-lg"
               />
